@@ -1,0 +1,129 @@
+<html>
+<head>
+<style>
+#user {
+position: absolute;
+margin-left: 5;
+margin-left: 54;
+}
+
+#pedro {
+width: 240px;
+height: 346px;
+background-color: red;
+border: 5px solid #818181;
+border-radius: 10px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+}
+
+input[type="text"] {
+width: 202px;
+height: 40px;
+font-size: 20px;
+background-color: transparent;
+border: none;
+margin-left: 5;
+color: black;
+}
+
+input[type="button"] {
+width: 50px;
+height: 50px;
+font-size: 20px;
+border: none;
+cursor: pointer;
+background-color: #818181;
+color: #fff;
+outline: none;
+}
+
+#nona {
+position: absolute;
+height: 105px;
+margin-top: -16;
+}
+
+#nano {
+width: 105px;
+position: absolute;
+}
+
+#nanas {
+border: 1px solid black;
+width: 209px;
+margin-left: 3px;
+margin-bottom: 5;
+background-color: #fff;
+}
+
+#centercalc {
+width: 218px;
+height: 317px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+}
+</style>
+<script type="text/javascript">
+function displynum(n1)
+{
+calcform.txt1.value=calcform.txt1.value+n1;
+}
+
+function back(){
+var exp = calcform.txt1.value;
+calcform.txt1.value = exp.substring(0,exp.length-1);
+}
+
+function clean() {
+calcform.txt1.value="";
+}
+</script>
+<title>Calculadora</title>
+</head>
+<body>
+<div id="pedro">
+<form name="calcform">
+<div id="centercalc">
+<div id="nanas">
+<input type="text" name="txt1" style="text-align:right" disabled><br>
+</div>
+<table>
+<tr>
+<td><input type="button" value="C" onclick="clean()"></td>
+<td><input type="button" value="<" onclick="back()"></td>
+<td><input type="button" name="divbtn" value="/" onclick="displynum(divbtn.value)"></td>
+<td><input type="button" value="x" onclick="displynum('*')"></td>
+</tr>
+<tr>
+<td><input type="button" name="btn7" value="7" onclick="displynum(btn7.value)"></td>
+<td><input type="button" name="btn8" value="8" onclick="displynum(btn8.value)"></td>
+<td><input type="button" name="btn9" value="9" onclick="displynum(btn9.value)"></td>
+<td><input type="button" name="subbtn" value="-" onclick="displynum(subbtn.value)"></td>
+</tr>
+<tr>
+<td><input type="button" name="btn4" value="4" onclick="displynum(btn4.value)"></td>
+<td><input type="button" name="btn5" value="5" onclick="displynum(btn5.value)"></td>
+<td><input type="button" name="btn6" value="6" onclick="displynum(btn6.value)"></td>
+<td><input type="button" name="addbtn" value="+" onclick="displynum(addbtn.value)"></td>
+</tr>
+<tr>
+<td><input type="button" name="btn1" value="1" onclick="displynum(btn1.value)"></td>
+<td><input type="button" name="btn2" value="2" onclick="displynum(btn2.value)"></td>
+<td><input type="button" name="btn3" value="3" onclick="displynum(btn3.value)"></td>
+<td><input type="button" id="nona" name="eqlbtn" value="=" onclick="txt1.value=eval(txt1.value)"><br></td>
+</tr>
+<tr>
+<td><input type="button" id="nano" name="btn0" value="0" onclick="displynum(btn0.value)"></td>
+<td><input type="button" id="user" name="potbtn" value="." onclick="displynum(potbtn.value)"></td></td>
+</tr>
+<table>
+</div>
+</form>
+</div>
+</body>
+</html>
