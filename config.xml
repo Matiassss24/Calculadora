@@ -4,9 +4,11 @@
         Calcula
     </description>
     <author email="" href="">
-        Matiasss34
+        Matiasss24
     </author>
     <content src="index.html" />
     <access origin="*" />
 	<icon src="res/icon.png"/>
+<preference name="StatusBarOverlaysWebView" value="true" />
+<preference name="StatusBarBackgroundColor" value="#BE1912" />
 </widget>
